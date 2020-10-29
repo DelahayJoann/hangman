@@ -1,0 +1,52 @@
+body{
+    background-color: #3fbaeb;
+    color: white;
+    height: 100vh;
+    text-align: center;
+    font-size: 18px;
+}
+
+#guessLetters {
+    margin: 15px auto;
+    padding: 0;
+    max-width: 900px;
+
+    :after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+  
+    li {
+        float: left;
+        list-style: none;
+        width: 35px;
+        margin: 0 10px 10px 0;
+        background: #fff;
+        color:#3fbaeb;
+        cursor: pointer;
+        border-radius: 5px;
+        border: solid 1px #fff;
+    }
+    li:hover {
+        background: #1571c7;
+        border: solid 1px white;
+        color: white;
+    }
+}
+#found {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: inline-block;
+        list-style: none;
+        position: relative;
+        margin: 0;
+        padding: 0 10px;
+        font-size: 1.6em;
+      }
+  }
+  
+  
