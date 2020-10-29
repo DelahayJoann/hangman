@@ -23,7 +23,7 @@ window.onload = function () {
         xhr.send();
     }
       
-    makeRequest('GET', './assets/resources/list.txt', function (err, datums) {
+    makeRequest('GET', '/hangman/assets/resources/list.txt', function (err, datums) {
         if (err) { throw err; }
         console.log(datums);
     });
