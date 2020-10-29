@@ -25,7 +25,8 @@ window.onload = function () {
       
     makeRequest('GET', '/hangman/assets/resources/list.txt', function (err, datums) {
         if (err) { throw err; }
-        console.log(datums);
+        words = datums.split('\n');
+        play();
     });
     
     
