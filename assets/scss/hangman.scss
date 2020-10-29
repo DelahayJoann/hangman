@@ -60,7 +60,28 @@ body{
         margin: 0;
         padding: 0 10px;
         font-size: 1.6em;
-      }
+    }
+}
+
+button {
+    border-radius: 5px;
+    background: #1571c7;
+    color: #fff;
+    border: solid 1px #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 18px 10px;
+    width: 180px;
+    margin: 10px;
+    outline: none;
   }
-  
+  button:hover {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+    border: solid 1px #fff;
+    color: #1571c7;
+  }
   
