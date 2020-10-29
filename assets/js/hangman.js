@@ -1,5 +1,4 @@
 window.onload = function () {
-    let rawText;
     let words = [];
     let guessButtonsLabels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's','t', 'u', 'v', 'w', 'x', 'y', 'z'];
     let wordToGuess = [];
@@ -9,12 +8,16 @@ window.onload = function () {
     let spaces = 0;
     let finished = false;
 
+
+    
     var client = new XMLHttpRequest();
-    client.open('GET', '../assets/resources/list.txt');
+    client.open('GET', './assets/resources/list.txt');
     client.onreadystatechange = function() {
-        words = client.responseText.split('\n');
+        console.log(client.responseText);
+        play();
     }
     client.send();
+
     
     
     let guessButtons = function(){
@@ -170,5 +173,4 @@ window.onload = function () {
         returnText();
 
     }
-    play();
 }
