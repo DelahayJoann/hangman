@@ -9,15 +9,23 @@ window.onload = function () {
     let finished = false;
 
 
-    
-    var client = new XMLHttpRequest();
-    client.open('GET', '/assets/resources/list.txt');
-    client.onreadystatechange = function() {
-        console.log(client.responseText);
-        play();
-    }
-    client.send();
 
+    function makeRequest (method, url, done) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.onload = function () {
+          done(null, xhr.response);
+        };
+        xhr.onerror = function () {
+          done(xhr.response);
+        };
+        xhr.send();
+    }
+      
+    makeRequest('GET', '/assets/resources/list.txt', function (err, datums) {
+        if (err) { throw err; }
+        console.log(datums);
+    });
     
     
     let guessButtons = function(){
