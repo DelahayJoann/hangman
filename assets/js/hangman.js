@@ -6,6 +6,7 @@ window.onload = function () {
     let tryLeft;
     let counter;
     let spaces = 0;
+    let finished = false;
 
     let guessButtons = function(){
         html_guessButtons = document.getElementById("guessButtons");
@@ -43,13 +44,19 @@ window.onload = function () {
 
     let returnText = function(){
         html_tryLeft.innerHTML = (tryLeft > 1)?"You still have "+tryLeft+" tries left.":"You still have "+tryLeft+" try left.";
-        if(tryLeft < 1)html_tryLeft.innerHTML="Loose";
-        if(counter+spaces == guessed.length)html_tryLeft.innerHTML="Win!";
+        if(tryLeft < 1){
+            html_tryLeft.innerHTML="Loose";
+            finished = true;
+        }
+        if(counter+spaces == guessed.length){
+            html_tryLeft.innerHTML="Win!";
+            finished = true;
+        }
     }
 
     let check = function (list) {
         list.onclick = function(){
-            if(tryLeft>=0){
+            if(!finished){
                 let guessLetter = this.innerHTML;
                 this.setAttribute("class", "actived");
                 this.onclick = null;

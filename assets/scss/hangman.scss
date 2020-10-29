@@ -28,11 +28,25 @@ body{
         border-radius: 5px;
         border: solid 1px #fff;
     }
+
     li:hover {
         background: #1571c7;
         border: solid 1px white;
         color: white;
     }
+
+    .actived {
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+        -moz-transition: all 1s ease-in;
+        -moz-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        cursor: default;
+
+        :hover {
+            background: #fff;
+          }
+      }
 }
 #found {
     display: block;
