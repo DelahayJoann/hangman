@@ -1,5 +1,6 @@
 window.onload = function () {
-    let words = ['BeCode - Test','Javascript','hangman'];
+    let rawText;
+    let words = [];
     let guessButtonsLabels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's','t', 'u', 'v', 'w', 'x', 'y', 'z'];
     let wordToGuess = [];
     let guessed = [];
@@ -8,6 +9,14 @@ window.onload = function () {
     let spaces = 0;
     let finished = false;
 
+    var client = new XMLHttpRequest();
+    client.open('GET', '../assets/resources/list.txt');
+    client.onreadystatechange = function() {
+        words = client.responseText.split('\n');
+    }
+    client.send();
+    
+    
     let guessButtons = function(){
         html_guessButtons = document.getElementById("guessButtons");
         dom_guessLetters = document.createElement('ul');
