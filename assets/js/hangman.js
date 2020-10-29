@@ -11,7 +11,7 @@ window.onload = function () {
 
     
     var client = new XMLHttpRequest();
-    client.open('GET', './assets/resources/list.txt');
+    client.open('GET', '/assets/resources/list.txt');
     client.onreadystatechange = function() {
         console.log(client.responseText);
         play();
