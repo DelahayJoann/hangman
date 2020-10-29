@@ -7,6 +7,7 @@ window.onload = function () {
     let counter;
     let spaces = 0;
     let finished = false;
+    let tmpWord;
 
 
 
