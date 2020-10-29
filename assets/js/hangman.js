@@ -187,6 +187,7 @@ window.onload = function () {
         dom_found.parentNode.removeChild(dom_found);
         dom_guessLetters.parentNode.removeChild(dom_guessLetters);
         context.clearRect(0, 0, 400, 400);
+        finished = false;
         play();
       }
 }
