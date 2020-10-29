@@ -27,7 +27,6 @@ window.onload = function () {
         if (err) { throw err; }
         words = datums.split('\n');
         play();
-        console.log(wordToGuess);
     });
     
     
