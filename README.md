@@ -5,7 +5,6 @@
 - Challenge: **solo**
 - Duration : **2,5 days**
 - Deadline : **03/11/2020, 12:30 pm**
-- **Form: https://docs.google.com/spreadsheets/d/1x4txdnE7CdGMdlrZtPZeXBoBkKb4TYj4NPz-4UhSOew/edit?usp=sharing**
 
 ## The mission
 
